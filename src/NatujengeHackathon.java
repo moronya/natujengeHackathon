@@ -33,28 +33,22 @@ public class NatujengeHackathon{
         System.out.println("verificationTag --> "+verificationTag );
 
         //type
-        //index 8 -8bit
+        //index 12 -8bit
         int type = 0;
-        type |= (bytes[8]&0xff);
-        System.out.println("type -->" + type);
+        type |= (bytes[12]&0xff);
+        System.out.println("type --> " + type);
 
         // B flag
-        //index 9 - 1 bit
-        boolean BFlag = ((bytes[9] &0xff) & 0b00000010) >0;
+        //index 13 - 1 bit
+        boolean BFlag = ((bytes[13] &0xff) & 0b00000010) >0;
         System.out.println("BFlag --> "+BFlag );
 
         // length
-        //index 10 and 11 - 16 bits
+        //index 14 and 15 - 16 bits
         int length = 0;
-        length |= (bytes[10] &0xff) <<8;
-        length |= (bytes[11] &0xff);
+        length |= (bytes[14] &0xff) <<8;
+        length |= (bytes[15] &0xff);
         System.out.println("length --> "+length );
-
-
-
-
-
-
 
 
     }

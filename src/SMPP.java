@@ -43,7 +43,7 @@ public class SMPP {
 
         byte result [] ={
         };
-        result = result.push(tag, lengthBytes,valueBytes );
+//        result = result.push(tag, lengthBytes,valueBytes );
         System.out.println("Result --> "+ result);
 
 
